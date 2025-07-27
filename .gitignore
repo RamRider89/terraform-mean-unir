@@ -2,6 +2,7 @@
 .vscode/
 .dev/
 .back/
+*.back
 
 # Local .terraform directories
 .terraform/

@@ -3,7 +3,7 @@
 ### Despliegue de MEAN multicapa mediante Terraform
 
 # estructura
-.
+
 ├── main.tf                     # Orquestador principal
 ├── variables.tf                # Variables globales
 ├── modules/
