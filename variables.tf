@@ -25,16 +25,12 @@ variable "my_public_ip" {
 variable "ami_app_server" {
   description = "El ID de la AMI para el servidor de aplicaciones (Node.js + Nginx) construida con Packer."
   type        = string
-  # ¡IMPORTANTE! Reemplaza esto con el AMI ID real que generaste con Packer.
-  # Ejemplo: "ami-0abcdef1234567890"
   default = "ami-0033f2a69c6bb01d7" # AMI de Ubuntu 24.04 LTS
 }
 
 variable "ami_db_server" {
   description = "El ID de la AMI para el servidor de base de datos (MongoDB). Puede ser una base Ubuntu o una preconfigurada."
   type        = string
-  # ¡IMPORTANTE! Reemplaza esto con el AMI ID real.
-  # Ejemplo: "ami-0abcdef1234567890"
   default = "ami-0a89104a1ccdc51c0" # AMI de Ubuntu 24.04 LTS
 }
 

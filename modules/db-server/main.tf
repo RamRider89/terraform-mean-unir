@@ -8,13 +8,6 @@ resource "aws_instance" "db_server" {
   vpc_security_group_ids = [var.security_group_id]
   key_name      = var.ssh_key_name # Clave SSH para acceso
 
-  # Aprovisionamiento para instalar MongoDB
-  provisioner "remote-exec" {
-    inline = [
-      "sudo systemctl restart mongod"
-    ]
-  }
-
   tags = {
     Name = "${var.project_name}-db-server"
   }
