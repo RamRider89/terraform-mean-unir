@@ -19,4 +19,5 @@
 │       ├── main.tf
 │       ├── variables.tf
 │       └── outputs.tf
+└── terraform.tf                # Definición de versiones para terraform y plugin aws
 └── providers.tf                # Configuración del proveedor de AWS
