@@ -3,6 +3,6 @@
 # En este caso, configuramos el proveedor de Amazon Web Services (AWS).
 
 provider "aws" {
-  region = var.aws_region # La región de AWS se toma de la variable global 'aws_region'.
+  region  = var.aws_region # La región de AWS se toma de la variable global 'aws_region'.
   profile = "unir"
 }

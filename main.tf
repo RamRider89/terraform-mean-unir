@@ -22,7 +22,7 @@ module "db_server" {
   ami_id            = var.ami_db_server
   instance_type     = var.instance_type_db
   ssh_key_name      = var.ssh_key_name
-  subnet_id         = module.network.private_subnet_id # Salida del módulo de red
+  subnet_id         = module.network.private_subnet_id    # Salida del módulo de red
   security_group_id = module.network.db_security_group_id # Salida del módulo de red
 }
 
@@ -35,9 +35,9 @@ module "app_server" {
   ami_id            = var.ami_app_server
   instance_type     = var.instance_type_app
   ssh_key_name      = var.ssh_key_name
-  subnet_id         = module.network.public_subnet_id # Salida del módulo de red
+  subnet_id         = module.network.public_subnet_id      # Salida del módulo de red
   security_group_id = module.network.app_security_group_id # Salida del módulo de red
-  db_private_ip     = module.db_server.private_ip # Salida del módulo de base de datos
+  db_private_ip     = module.db_server.private_ip          # Salida del módulo de base de datos
   app_port          = var.app_port
 }
 

@@ -100,7 +100,7 @@ resource "aws_security_group" "app_server_sg" {
 # Grupo de Seguridad para el Servidor de Base de Datos (db-server-sg)
 resource "aws_security_group" "db_server_sg" {
   name        = "${var.project_name}-db-server-sg"
-  description = "Permitir MySQL/MongoDB desde el servidor de aplicaciones y SSH desde mi IP"
+  description = "Permitir MongoDB desde el servidor de aplicaciones y SSH desde mi IP"
   vpc_id      = aws_vpc.main.id
 
   # Regla para MongoDB (Puerto 27017)

@@ -27,7 +27,7 @@ variable "ami_app_server" {
   type        = string
   # ¡IMPORTANTE! Reemplaza esto con el AMI ID real que generaste con Packer.
   # Ejemplo: "ami-0abcdef1234567890"
-  default     = "ami-0abcdef1234567890" # AMI de Ubuntu 22.04 LTS (ejemplo, reemplaza)
+  default     = "ami-0033f2a69c6bb01d7" # AMI de Ubuntu 24.04 LTS
 }
 
 variable "ami_db_server" {
@@ -35,19 +35,19 @@ variable "ami_db_server" {
   type        = string
   # ¡IMPORTANTE! Reemplaza esto con el AMI ID real.
   # Ejemplo: "ami-0abcdef1234567890"
-  default     = "ami-0abcdef1234567890" # AMI de Ubuntu 22.04 LTS (ejemplo, reemplaza)
+  default     = "ami-0a89104a1ccdc51c0" # AMI de Ubuntu 24.04 LTS
 }
 
 variable "instance_type_app" {
   description = "Tipo de instancia EC2 para el servidor de aplicaciones."
   type        = string
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
 
 variable "instance_type_db" {
   description = "Tipo de instancia EC2 para el servidor de base de datos."
   type        = string
-  default     = "t2.micro"
+  default     = "t3.micro"
 }
 
 variable "db_port" {
@@ -66,5 +66,5 @@ variable "ssh_key_name" {
   description = "El nombre de la clave EC2 (Key Pair) existente en AWS para acceso SSH."
   type        = string
   # ¡IMPORTANTE! Reemplaza esto con el nombre de tu Key Pair en AWS.
-  default     = "mi-key-pair-aws"
+  default     = "mongo-unir-keys"
 }
