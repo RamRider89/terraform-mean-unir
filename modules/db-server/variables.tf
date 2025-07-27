@@ -7,7 +7,7 @@ variable "project_name" {
 }
 
 variable "aws_region" {
-  description = "La region de AWS."
+  description = "La región de AWS."
   type        = string
 }
 
@@ -27,11 +27,16 @@ variable "ssh_key_name" {
 }
 
 variable "subnet_id" {
-  description = "El ID de la subred privada donde se desplegara la DB."
+  description = "El ID de la subred privada donde se desplegará la DB."
   type        = string
 }
 
 variable "security_group_id" {
   description = "El ID del grupo de seguridad para el servidor de base de datos."
+  type        = string
+}
+
+variable "app_server_public_ip" {
+  description = "La IP publica del servidor de aplicaciones para usar como proxy SSH."
   type        = string
 }

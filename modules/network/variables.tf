@@ -12,7 +12,7 @@ variable "aws_region" {
 }
 
 variable "my_public_ip" {
-  description = "Tu direccion IP pública para acceso SSH."
+  description = "Tu direccion IP publica para acceso SSH."
   type        = string
 }
 
@@ -22,6 +22,6 @@ variable "db_port" {
 }
 
 variable "app_port" {
-  description = "Puerto interno de la aplicacion Node.js."
+  description = "Puerto interno de la aplicación Node.js."
   type        = number
 }

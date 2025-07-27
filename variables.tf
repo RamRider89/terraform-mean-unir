@@ -5,7 +5,7 @@
 variable "aws_region" {
   description = "La region de AWS donde se desplegara la infraestructura."
   type        = string
-  default     = "us-west-1" # Puedes cambiar esta región por tu preferencia.
+  default     = "us-west-1" # Puedes cambiar esta region por tu preferencia.
 }
 
 variable "project_name" {
@@ -15,9 +15,9 @@ variable "project_name" {
 }
 
 variable "my_public_ip" {
-  description = "Tu dirección IP publica para permitir el acceso SSH y HTTP/S a las instancias."
+  description = "Tu direccion IP publica para permitir el acceso SSH y HTTP/S a las instancias."
   type        = string
-  # ¡IMPORTANTE! Reemplaza esto con tu IP pública actual seguida de /32 (ej. "203.0.113.45/32").
+  # ¡IMPORTANTE! Reemplaza esto con tu IP publica actual seguida de /32 (ej. "203.0.113.45/32").
   # Puedes obtener tu IP con 'curl ifconfig.me' o 'whatismyip.com'.
   default = "0.0.0.0/0" # ¡ADVERTENCIA! Usar 0.0.0.0/0 para SSH es INSEGURO en producción.
 }
@@ -25,13 +25,13 @@ variable "my_public_ip" {
 variable "ami_app_server" {
   description = "El ID de la AMI para el servidor de aplicaciones (Node.js + Nginx) construida con Packer."
   type        = string
-  default = "ami-0033f2a69c6bb01d7" # AMI de Ubuntu 24.04 LTS
+  default     = "ami-0033f2a69c6bb01d7" # AMI de Ubuntu 24.04 LTS
 }
 
 variable "ami_db_server" {
   description = "El ID de la AMI para el servidor de base de datos (MongoDB). Puede ser una base Ubuntu o una preconfigurada."
   type        = string
-  default = "ami-0a89104a1ccdc51c0" # AMI de Ubuntu 24.04 LTS
+  default     = "ami-0a89104a1ccdc51c0" # AMI de Ubuntu 24.04 LTS
 }
 
 variable "instance_type_app" {

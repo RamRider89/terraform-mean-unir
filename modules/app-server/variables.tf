@@ -7,7 +7,7 @@ variable "project_name" {
 }
 
 variable "aws_region" {
-  description = "La region de AWS."
+  description = "La región de AWS."
   type        = string
 }
 
@@ -27,7 +27,7 @@ variable "ssh_key_name" {
 }
 
 variable "subnet_id" {
-  description = "El ID de la subred publica donde se desplegara la app."
+  description = "El ID de la subred pública donde se desplegará la app."
   type        = string
 }
 
@@ -42,6 +42,11 @@ variable "db_private_ip" {
 }
 
 variable "app_port" {
-  description = "Puerto interno de la aplicacion Node.js."
+  description = "Puerto interno de la aplicación Node.js."
   type        = number
+}
+
+variable "app_target_group_arn" { # <--- ¡NUEVA VARIABLE!
+  description = "El ARN del Target Group del ALB al que se adjuntara la instancia de la aplicacion."
+  type        = string
 }
