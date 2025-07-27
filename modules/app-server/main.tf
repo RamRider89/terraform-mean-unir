@@ -15,7 +15,7 @@ resource "aws_instance" "app_server" {
       # Esto puede variar si la app usa un archivo de config o variables de entorno
       # Aquí un ejemplo para variables de entorno (si tu app las lee)
       "echo 'DB_HOST=${var.db_private_ip}' | sudo tee -a /etc/environment",
-      "echo 'DB_PORT=${var.db_port}' | sudo tee -a /etc/environment",
+      "echo 'DB_PORT=27017' | sudo tee -a /etc/environment",
       # Si tu app Node.js lee de .env, necesitarías copiar un .env o configurar de otra forma
     ]
   }

@@ -7,7 +7,7 @@ variable "project_name" {
 }
 
 variable "aws_region" {
-  description = "La región de AWS."
+  description = "La region de AWS."
   type        = string
 }
 
@@ -27,7 +27,7 @@ variable "ssh_key_name" {
 }
 
 variable "subnet_id" {
-  description = "El ID de la subred privada donde se desplegará la DB."
+  description = "El ID de la subred privada donde se desplegara la DB."
   type        = string
 }
 

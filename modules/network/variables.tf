@@ -7,12 +7,12 @@ variable "project_name" {
 }
 
 variable "aws_region" {
-  description = "La región de AWS."
+  description = "La region de AWS."
   type        = string
 }
 
 variable "my_public_ip" {
-  description = "Tu dirección IP pública para acceso SSH."
+  description = "Tu direccion IP pública para acceso SSH."
   type        = string
 }
 
@@ -22,6 +22,6 @@ variable "db_port" {
 }
 
 variable "app_port" {
-  description = "Puerto interno de la aplicación Node.js."
+  description = "Puerto interno de la aplicacion Node.js."
   type        = number
 }

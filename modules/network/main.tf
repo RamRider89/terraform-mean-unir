@@ -69,7 +69,7 @@ resource "aws_security_group" "app_server_sg" {
 
   # Regla para SSH (Puerto 22)
   ingress {
-    description = "SSH desde mi IP pública"
+    description = "SSH desde mi IP publica"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
@@ -78,7 +78,7 @@ resource "aws_security_group" "app_server_sg" {
 
   # Regla para la aplicación Node.js (Puerto 3000) - si se accede directamente
   ingress {
-    description = "App Node.js desde mi IP pública"
+    description = "App Node.js desde mi IP publica"
     from_port   = var.app_port
     to_port     = var.app_port
     protocol    = "tcp"
@@ -114,7 +114,7 @@ resource "aws_security_group" "db_server_sg" {
 
   # Regla para SSH (Puerto 22)
   ingress {
-    description = "SSH desde mi IP pública"
+    description = "SSH desde mi IP publica"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
